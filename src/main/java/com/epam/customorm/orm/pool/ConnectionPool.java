@@ -104,18 +104,8 @@ public final class ConnectionPool {
         } catch (SQLException | InterruptedException e) {
             e.printStackTrace();
         }
-        deregisterDriver();
+//        deregisterDriver();
         logger.info("Connection Pool was destroyed, drivers were deregistered");
-    }
-
-    private void deregisterDriver() {
-        DriverManager.getDrivers().asIterator().forEachRemaining(driver -> {
-            try {
-                DriverManager.deregisterDriver(driver);
-            } catch (SQLException e) {
-                logger.error(e);
-            }
-        });
     }
 
 }

@@ -16,7 +16,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@DBTable(name = "USER")
+@DBTable(name = "custom_orm.user")
 public class UserEntity extends Entity {
     @Id
     @Column(name = "id", type = FieldType.BIGINT)
